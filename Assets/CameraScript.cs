@@ -7,19 +7,27 @@ public class CameraScript : MonoBehaviour
     public Transform target;
     public float distance = 10;
 
-    private bool distChange = true;
+    private Transform targetOld;
+    private float distanceOld;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        targetOld = null;
+        distanceOld = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var changeTarget = targetOld == null || !(targetOld.position.Equals(target.position));
+
         // Rotate the camera every frame so it keeps looking at the target
-        transform.LookAt(target);
+        if (changeTarget)
+        {
+            transform.LookAt(target);
+            targetOld = target;
+        }
 
         // Same as above, but setting the worldUp parameter to Vector3.left in this example turns the camera on its side
         //transform.LookAt(target, Vector3.left);
@@ -31,20 +39,19 @@ public class CameraScript : MonoBehaviour
             distance += wheel;
             if (distance < 1)
                 distance = 1;
-            distChange = true;
         }
         else if (wheel > 0)
         {
             distance += wheel;
-            distChange = true;
         }
 
-        if (distChange)
+        if (changeTarget || distance != distanceOld)
         {
-            var diff = target.position - ((target.position - this.transform.position).normalized * distance);
+            //var diff = target.position - ((target.position - this.transform.position).normalized * distance);
 
-            transform.Translate(diff);
-            distChange = false;
+            //transform.Translate(diff);
+            transform.Translate((target.position - this.transform.position).normalized * distance);
+            distanceOld = distance;
         }
     }
 }
