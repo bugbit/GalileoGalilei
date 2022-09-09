@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Test1 : MonoBehaviour
 {
-    
+    public List<SolData> solData=new List<SolData>();
 
-    [ContextMenu("Do Something")]
-    void DoSomething()
+    [ContextMenu("Generate SolData")]
+    void GenerateSolData()
     {
         Debug.Log("Perform operation");
     }
