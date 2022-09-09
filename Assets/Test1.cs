@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Test1 : MonoBehaviour
 {
-    public List<SolData> solData=new List<SolData>();
+    public List<SolDataItem> solData = new List<SolDataItem>();
+    public Dictionary<string, string> prueba = new Dictionary<string, string>();
 
     [ContextMenu("Generate SolData")]
     void GenerateSolData()
@@ -21,6 +22,6 @@ public class Test1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

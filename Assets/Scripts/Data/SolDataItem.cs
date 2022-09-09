@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName="New Solar data", menuName="Assets/NewSolData")]
-public class SolData : ScriptableObject
+/// <summary>
+/// This file contains summary information on all major solar system bodies. It includes all planets, dwarf planets and moons, but does not include asteroids or comets; these are contained in another dataset.
+/// </summary>
+//[CreateAssetMenu(fileName="New Solar data", menuName="Assets/NewSolData")]
+public class SolDataItem : MonoBehaviour
 {
     // eName - string - the name of the object
     public string eName;
     // isPlanet - boolean - is the object a planet (this includes the five dwarf planets)
-    public string isPlanet;
+    public Boolean isPlanet;
     // semimajorAxis - integer - mean orbital distance in km
     public decimal semimajorAxis;
     // perihelion - integer - closest distance from the Sun during its orbit
