@@ -82,7 +82,7 @@ public class CSVToSO
             if (sun == null)
                 throw new Exception("sun no in sol_data");
 
-            var ssolar = new GameObject { name = "solarSystem" };
+            var ssolar = new GameObject { name = "Solar System" };
             var ssolardata = ssolar.AddComponent<SistemaPlanetarioData>();
 
             objs.Add(ssolar.name, ssolar);

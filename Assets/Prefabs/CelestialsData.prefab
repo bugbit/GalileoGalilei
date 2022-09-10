@@ -10375,7 +10375,7 @@ GameObject:
   - component: {fileID: 3335965326003818}
   - component: {fileID: 8535149382822987140}
   m_Layer: 0
-  m_Name: solarSystem
+  m_Name: Solar System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
