@@ -1,21 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CosmoEscalaItemData : ScriptableObject
+//Create a custom struct and apply [Serializable] attribute to it
+[Serializable]
+public struct CosmoEscalaItemData
+//: MonoBehaviour
+//: ScriptableObject
 {
     public double numerator;
     public double denominator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
