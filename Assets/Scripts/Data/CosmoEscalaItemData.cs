@@ -11,4 +11,9 @@ public struct CosmoEscalaItemData
 {
     public double numerator;
     public double denominator;
+
+    public double Calc(double valor)
+    {
+        return valor * numerator / denominator;
+    }
 }

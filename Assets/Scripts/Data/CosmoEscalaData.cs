@@ -17,6 +17,11 @@ public class CosmoEscalaData : MonoBehaviour
     [SerializeField]
     public CosmoEscalaItemData radio_estrella;
 
+    public void CalcDatas()
+    {
+        //var estrellas=this.GetComponentsInChildren
+    }
+
     [ContextMenu("Aplicar EscalaVistaPlanetaria")]
     void AplicarEscalaVistaPlanetaria()
     {
