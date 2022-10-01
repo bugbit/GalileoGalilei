@@ -1514,6 +1514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111484553}
+  - component: {fileID: 1111484554}
   m_Layer: 0
   m_Name: Sistemas
   m_TagString: Untagged
@@ -1538,6 +1539,20 @@ Transform:
   m_Father: {fileID: 1608362102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111484554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111484552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5418fcf18d2ece1a8925e9cbb2e9f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sistemas:
+  - {fileID: 1267994886}
 --- !u!1 &1225958859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1267994885}
+  - component: {fileID: 1267994886}
   m_Layer: 0
   m_Name: Solar System
   m_TagString: Untagged
@@ -1621,6 +1637,20 @@ Transform:
   m_Father: {fileID: 1111484553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267994886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267994884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3272abda29d357a0a666eb85434ef29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estrellas:
+  - {fileID: 1367695342}
 --- !u!1 &1292983847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1676,7 @@ Transform:
   m_GameObject: {fileID: 1292983847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 6.96342, y: 6.96342, z: 6.96342}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1634230542}
@@ -1796,7 +1826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53de3055419c8f4f965486d5ca7d28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escala: {fileID: 0}
+  data: {fileID: 0}
   model: {fileID: 0}
 --- !u!114 &1318053324
 MonoBehaviour:
@@ -1854,7 +1884,7 @@ Transform:
   m_GameObject: {fileID: 1367695338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1292983848}
@@ -1927,7 +1957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53de3055419c8f4f965486d5ca7d28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escala: {fileID: 1608362103}
+  data: {fileID: 1367695340}
   model: {fileID: 1292983847}
 --- !u!1 &1451098308
 GameObject:
@@ -2038,7 +2068,7 @@ GameObject:
   - component: {fileID: 1608362102}
   - component: {fileID: 1608362103}
   m_Layer: 0
-  m_Name: celestials
+  m_Name: celestials template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2075,12 +2105,16 @@ MonoBehaviour:
   radio_planeta:
     numerator: 1
     denominator: 10000
+  radio_planetaPequenyo:
+    numerator: 1
+    denominator: 1000
   distancia:
     numerator: 1
     denominator: 1000000
   radio_estrella:
     numerator: 1
     denominator: 100000
+  sistemas: {fileID: 1111484554}
 --- !u!1 &1634230541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a81ccf5132d775d1a1e868cb717d51c, type: 2}
+  - {fileID: 2100000, guid: 8c3be6fc97095d278a268b3dca78d4f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

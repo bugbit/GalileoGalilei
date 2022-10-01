@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StstemasObj : MonoBehaviour
+public class SistemasObj : MonoBehaviour
 {
+    public List<SistemaPlanetarioObj> sistemas;
+
+    public void CalcDatas(CosmoEscalaData escala)
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {

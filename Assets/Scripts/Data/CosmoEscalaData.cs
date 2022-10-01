@@ -8,18 +8,18 @@ public class CosmoEscalaData : MonoBehaviour
     //by applying [SerializeField] attribute to it
     [SerializeField]
     public CosmoEscalaItemData radio_planeta;
-    //Make the private field of our PlayerStats struct visible in the Inspector
-    //by applying [SerializeField] attribute to it
+    [SerializeField]
+    public CosmoEscalaItemData radio_planetaPequenyo;
     [SerializeField]
     public CosmoEscalaItemData distancia;
-    //Make the private field of our PlayerStats struct visible in the Inspector
-    //by applying [SerializeField] attribute to it
     [SerializeField]
     public CosmoEscalaItemData radio_estrella;
 
+    public SistemasObj sistemas;
+
     public void CalcDatas()
     {
-        //var estrellas=this.GetComponentsInChildren
+        sistemas.sistemas.ForEach(s => s.CalcDatas(this));
     }
 
     [ContextMenu("Aplicar EscalaVistaPlanetaria")]
@@ -31,10 +31,22 @@ public class CosmoEscalaData : MonoBehaviour
             numerator = 1,
             denominator = 10000
         };
+        radio_planetaPequenyo = new CosmoEscalaItemData
+        {
+            numerator = 1,
+            denominator = 1000
+        };
         //{350.0, 590010000},
         distancia = new CosmoEscalaItemData { numerator = 1, denominator = 1000000 };
         //{90.0, 14950300},
         radio_estrella = new CosmoEscalaItemData { numerator = 1, denominator = 100000 };
+        AplicarEscala();
+    }
+
+    [ContextMenu("Aplicar Escala")]
+    void AplicarEscala()
+    {
+        CalcDatas();
     }
 
     // Start is called before the first frame update
