@@ -15,13 +15,6 @@ public class CosmoEscalaData : MonoBehaviour
     [SerializeField]
     public CosmoEscalaItemData radio_estrella;
 
-    public SistemasObj sistemas;
-
-    public void CalcDatas()
-    {
-        sistemas.sistemas.ForEach(s => s.CalcDatas(this));
-    }
-
     [ContextMenu("Aplicar EscalaVistaPlanetaria")]
     void AplicarEscalaVistaPlanetaria()
     {
@@ -40,13 +33,6 @@ public class CosmoEscalaData : MonoBehaviour
         distancia = new CosmoEscalaItemData { numerator = 1, denominator = 1000000 };
         //{90.0, 14950300},
         radio_estrella = new CosmoEscalaItemData { numerator = 1, denominator = 100000 };
-        AplicarEscala();
-    }
-
-    [ContextMenu("Aplicar Escala")]
-    void AplicarEscala()
-    {
-        CalcDatas();
     }
 
     // Start is called before the first frame update

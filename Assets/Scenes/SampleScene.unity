@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e974ceaff0386bfe08f8d0e29d3f89e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeMaterial: 2
+  typeMaterial: 1
 --- !u!4 &945355316
 Transform:
   m_ObjectHideFlags: 0
@@ -1952,8 +1952,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367695339}
-  - component: {fileID: 1367695340}
   - component: {fileID: 1367695341}
+  - component: {fileID: 1367695340}
   - component: {fileID: 1367695344}
   - component: {fileID: 1367695343}
   - component: {fileID: 1367695342}
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53de3055419c8f4f965486d5ca7d28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astro: {fileID: 0}
+  astro: {fileID: 1367695343}
   model: {fileID: 1292983847}
 --- !u!114 &1367695343
 MonoBehaviour:
@@ -2075,9 +2075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3835d40de34f3e6983a100b21ac582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 2100000, guid: 5a81ccf5132d775d1a1e868cb717d51c, type: 2}
-  mat2k: {fileID: 0}
-  mat8k: {fileID: 0}
+  normal: {fileID: 0}
+  mat2k: {fileID: 2100000, guid: 5a81ccf5132d775d1a1e868cb717d51c, type: 2}
+  mat8k: {fileID: 2100000, guid: 1217f68e51b4e4ed5a12c2c64d17ac73, type: 2}
 --- !u!1 &1451098308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608362102}
   - component: {fileID: 1608362103}
+  - component: {fileID: 1608362104}
   m_Layer: 0
   m_Name: celestials template
   m_TagString: Untagged
@@ -2233,6 +2234,19 @@ MonoBehaviour:
   radio_estrella:
     numerator: 1
     denominator: 100000
+--- !u!114 &1608362104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608362101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a3a85220ad4f66ebac0cfe7e520141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escala: {fileID: 1608362103}
   sistemas: {fileID: 1111484554}
 --- !u!1 &1634230541
 GameObject:

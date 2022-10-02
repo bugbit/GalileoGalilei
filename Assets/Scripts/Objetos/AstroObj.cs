@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SolDataItem), typeof(MaterialsTypes))]
 public class AstroObj : MonoBehaviour
 {
     public SolDataItem data;
