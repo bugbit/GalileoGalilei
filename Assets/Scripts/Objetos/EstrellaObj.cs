@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AstroObj))]
 public class EstrellaObj : MonoBehaviour
 {
-    public SolDataItem data;
+    public AstroObj astro;
     public GameObject model;
+
+    void Start()
+    {
+        if (astro == null)
+            astro = GetComponent<AstroObj>();
+    }
 
 
     public void CalcDatas(CosmoEscalaData escala)
     {
+        var data = astro.data;
         var radiusData =
             (data.equaRadius != 0)
                 ? data.equaRadius
@@ -20,36 +28,4 @@ public class EstrellaObj : MonoBehaviour
 
         model.transform.localScale = new Vector3(radius, radius, radius);
     }
-
-    // public void CalcDatas()
-    // {
-    //     var radiusData =
-    //         (data.equaRadius != 0)
-    //             ? data.equaRadius
-    //             : (data.meanRadius > 0)
-    //                 ? data.meanRadius
-    //                 : data.polarRadius;
-    //     var radius = (float)escala.radio_estrella.Calc(radiusData);
-
-    //     model.transform.localScale = new Vector3(radius, radius, radius);
-    // }
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        data = GetComponent<SolDataItem>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    // [ContextMenu("Aplicar Escala")]
-    // void AplicarEscala()
-    // {
-    //     Awake();
-    //     CalcDatas();
-    // }
 }
