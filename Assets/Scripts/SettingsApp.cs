@@ -26,7 +26,11 @@ public class SettingsApp : MonoBehaviour
 
     void OnValidate()
     {
-        var obj = GameObject.FindGameObjectsWithTag("Celestials").FirstOrDefault(o => o.activeSelf);
+        //var objs = GameObject.FindGameObjectsWithTag("Celestials");
+        var objs = GameObject.FindObjectsOfType<CelestialsObj>();
+
+        foreach (var o in objs)
+            o.ChangeMaterial(typeMaterial);
 
         // if (obj!=null)
         // obj.GetComponent<CelestialsObj>().

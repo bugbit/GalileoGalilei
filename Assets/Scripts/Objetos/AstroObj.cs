@@ -9,6 +9,11 @@ public class AstroObj : MonoBehaviour
     public MaterialsTypes materials;
     public GameObject sphere;
 
+    public void ChangeMaterial(ETypeMaterials type)
+    {
+        materials.ChangeMaterial(sphere, type);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

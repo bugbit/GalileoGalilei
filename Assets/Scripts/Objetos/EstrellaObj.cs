@@ -8,12 +8,10 @@ public class EstrellaObj : MonoBehaviour
     public AstroObj astro;
     public GameObject model;
 
-    void Start()
+    public void ChangeMaterial(ETypeMaterials type)
     {
-        if (astro == null)
-            astro = GetComponent<AstroObj>();
+        astro.ChangeMaterial(type);
     }
-
 
     public void CalcDatas(CosmoEscalaData escala)
     {
@@ -27,5 +25,11 @@ public class EstrellaObj : MonoBehaviour
         var radius = (float)escala.radio_estrella.Calc(radiusData);
 
         model.transform.localScale = new Vector3(radius, radius, radius);
+    }
+
+    void Start()
+    {
+        if (astro == null)
+            astro = GetComponent<AstroObj>();
     }
 }

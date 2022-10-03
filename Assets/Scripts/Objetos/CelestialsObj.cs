@@ -8,6 +8,11 @@ public class CelestialsObj : MonoBehaviour
     public CosmoEscalaData escala;
     public SistemasObj sistemas;
 
+    public void ChangeMaterial(ETypeMaterials type)
+    {
+        sistemas.ChangeMaterial(type);
+    }
+
     public void CalcDatas()
     {
         sistemas.CalcDatas(escala);

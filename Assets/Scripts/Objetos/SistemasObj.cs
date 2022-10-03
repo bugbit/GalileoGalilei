@@ -6,6 +6,11 @@ public class SistemasObj : MonoBehaviour
 {
     public List<SistemaPlanetarioObj> sistemas;
 
+    public void ChangeMaterial(ETypeMaterials type)
+    {
+        sistemas.ForEach(s => s.ChangeMaterial(type));
+    }
+
     public void CalcDatas(CosmoEscalaData escala)
     {
         sistemas.ForEach(s => s.CalcDatas(escala));
