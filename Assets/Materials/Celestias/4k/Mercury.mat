@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mercury
-  m_Shader: {fileID: 4800000, guid: 9a1d803136d37981eb89c0483cd8efed, type: 3}
+  m_Shader: {fileID: 4800000, guid: 32a0ef2a7ef59ad47846655a3c02fa8d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _NORMALMAP
@@ -33,6 +33,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CloudsTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,6 +46,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -61,6 +69,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NightTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMapTex:
+        m_Texture: {fileID: 2800000, guid: ffea62e73a92e234d9280a32e736db04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -77,14 +93,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecularTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AtmosFalloff: 12
     - _AtmosphereDensity: 0
     - _BumpScale: 1
     - _CityLightIntensity: 0
+    - _CloudIntensityMin: 0
     - _CloudMapSpecularity: 0
     - _CloudPanSpeed: 0
     - _Cutoff: 0.5
+    - _DetailIntensity: 0.17
+    - _DetailIntensityMin: 0.01
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -94,22 +118,34 @@ Material:
     - _LightStretch: 0
     - _Metallic: 0
     - _Mode: 0
+    - _NightIntensity: 0.031
+    - _NightTransitionVariable: 1
     - _NormalMapIntensity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RimIntensity: 2.7
+    - _RimPower: 8.7
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 2
     - _SpecularMapIntensity: 0.4
+    - _SpecularPower: 0
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _AtmosFar: {r: 0.4557808, g: 0.5187039, b: 0.9850746, a: 1}
+    - _AtmosNear: {r: 0.1686275, g: 0.7372549, b: 1, a: 1}
     - _AtmosphereColor: {r: 0.4411765, g: 0.6300204, b: 1, a: 1}
     - _CityLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _CloudColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DayTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.26, g: 0.19, b: 0.16, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SunColor: {r: 0.6313726, g: 0.64705884, b: 0.54509807, a: 1}
+    - _SunDir: {r: 2, g: 0, b: 0, a: 0}
     - _TextureColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
