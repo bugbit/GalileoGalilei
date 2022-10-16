@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mercury
-  m_Shader: {fileID: 4800000, guid: 32a0ef2a7ef59ad47846655a3c02fa8d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 543a72c43ae674441b36c43b80402166, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _NORMALMAP
@@ -104,8 +104,8 @@ Material:
     - _BumpScale: 1
     - _CityLightIntensity: 0
     - _CloudIntensityMin: 0
-    - _CloudMapSpecularity: 0
-    - _CloudPanSpeed: 0
+    - _CloudMapSpecularity: -0.05
+    - _CloudPanSpeed: -0.28
     - _Cutoff: 0.5
     - _DetailIntensity: 0.17
     - _DetailIntensityMin: 0.01
@@ -125,11 +125,11 @@ Material:
     - _Parallax: 0.02
     - _RimIntensity: 2.7
     - _RimPower: 8.7
-    - _Smoothness: 0
+    - _Smoothness: 0.4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 2
-    - _SpecularMapIntensity: 0.4
+    - _SpecularMapIntensity: 0
     - _SpecularPower: 0
     - _SrcBlend: 1
     - _UVSec: 0
